@@ -33,12 +33,11 @@ export const Calculation = () => {
 
 
   const handleMultiplicate = () => {
-    console.log(valueOne);
     
-    if (valueOne == 0) {
+    if (!valueOne) {
       setErrorOne(true);
     }
-    else if (valueTwo == 0) {
+    else if (!valueTwo) {
       setErrorTwo(true);
     }
     else{
@@ -48,11 +47,11 @@ export const Calculation = () => {
   };
 
   const handleDivide = () => {
-    if (valueOne === 0) {
+    if (!valueOne) {
       setErrorOne(true);
       return;
     }
-    else if (valueTwo == 0) {
+    else if (!valueTwo) {
       setErrorTwo(true);
       return
     }

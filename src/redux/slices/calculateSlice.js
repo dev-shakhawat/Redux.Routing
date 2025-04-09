@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  valueOne: 0,
-  valueTwo: 0,
-  Result: 0,
+  valueOne: null,
+  valueTwo: null,
+  Result: "Result",
 };
 
 export const calculateSlice = createSlice({
@@ -23,9 +23,9 @@ export const calculateSlice = createSlice({
         state.Result = state.valueOne / state.valueTwo
     },
     reset: (state) => {
-        state.valueOne = 0;
-        state.valueTwo = 0;
-        state.Result = 0;
+        state.valueOne = "";
+        state.valueTwo = "";
+        state.Result = "";
     }
 
   },
